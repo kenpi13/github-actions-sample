@@ -9,7 +9,7 @@ on:
 jobs:
   deploy_staging:
     runs-on: ubuntu-latest
-    if: $ENVIRONMENT == 'staging
+    if: {{ ENVIRONMENT == 'staging }}
     environment:
       name: staging
       url: https://yahoo.co.jp
@@ -22,7 +22,7 @@ jobs:
   
   deploy_production:
     runs-on: ubuntu-latest
-    if: $ENVIRONMENT == 'production'
+    if: {{ ENVIRONMENT == 'production' }}
     environment:
       name: production
       url: https://google.com

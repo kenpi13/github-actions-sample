@@ -9,12 +9,10 @@ on:
 jobs:
   deploy_staging:
     runs-on: ubuntu-latest
-    if: $ENVIRONMENT == 'staging
+    if: {{ inputs.environment == 'staging }}
     environment:
       name: staging
       url: https://yahoo.co.jp
-    env:
-      ENVIRONMENT: ${{ inputs.environment }}
     steps:
       - run: echo "this is ${{github.event.inputs.environment}}"
       - run: echo deploy staging
@@ -22,12 +20,10 @@ jobs:
   
   deploy_production:
     runs-on: ubuntu-latest
-    if: $ENVIRONMENT == 'production'
+    if: {{ inputs.environment == 'production' }}
     environment:
       name: production
       url: https://google.com
-    env:
-      ENVIRONMENT: ${{ inputs.environment }}
     steps:
       - run: echo deploy production
       - run: echo secret ${{ secrets.SAMPLE_SECRET }}
