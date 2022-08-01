@@ -3,8 +3,7 @@ name: Deploy-Staging-Production
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        type: environment
+      
 
 jobs:
   deploy_staging:
