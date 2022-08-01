@@ -13,7 +13,7 @@ jobs:
       name: staging
       url: https://yahoo.co.jp
     steps:
-      - run: echo "this is ${{github.event.inputs.text}}"
+      - run: echo "ths is github.event.inputs.text"
       - run: echo deploy staging
       - run: echo secret ${{ secrets.SAMPLE_SECRET }}
   
