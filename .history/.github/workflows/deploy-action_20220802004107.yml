@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy_staging:
-    if: github.event.inputs.environment == 'staging'
+    if: ${{github.event.inputs.environment}} == 'staging'
     runs-on: ubuntu-latest
     environment:
       name: staging
@@ -20,7 +20,7 @@ jobs:
       - run: echo secret ${{ secrets.SAMPLE_SECRET }}
   
   deploy_production:
-    if: github.event.inputs.environment == 'production'
+    if: ${{github.event.inputs.environment}} == 'production'
     runs-on: ubuntu-latest
     environment:
       name: production
