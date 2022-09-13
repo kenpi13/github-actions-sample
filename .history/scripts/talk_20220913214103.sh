@@ -2,7 +2,7 @@ ISSKIP=$1
 if [ "$1" != "--skip-confirm" ]; then
   echo "本番環境で実行します"
   read answer
-  if !([[ "$answer" = "y" ]] || [[ "$answer" = "Y" ]]); then
+  if [[ !("$answer" = "y" -o "$answer" = "Y") ]]; then
     echo "処理を中断します"
     exit;
   fi
