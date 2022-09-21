@@ -11,5 +11,4 @@ jobs:
     - name: Echo
       run: |
         echo name
-        DATE=date
-        echo $DATE
+        echo date
