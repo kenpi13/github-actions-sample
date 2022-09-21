@@ -1,0 +1,12 @@
+name: Go deploy
+on:
+  push:
+
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Echo
+      run: echo name
