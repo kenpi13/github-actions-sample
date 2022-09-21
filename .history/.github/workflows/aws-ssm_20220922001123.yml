@@ -16,4 +16,4 @@ jobs:
         echo "::set-output name=NEXT_STEP::$RELEASE_VERSION"
       id: hoge
     - name: echo next
-      run: echo ${{  steps.hoge.outputs.NEXT_STEP  }}
+      run: 
