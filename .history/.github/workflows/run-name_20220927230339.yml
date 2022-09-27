@@ -1,5 +1,5 @@
 name: echo branch name
-run-name: echo by @${{ github.actor }}
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 
 on:
   push:
