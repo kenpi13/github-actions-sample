@@ -1,4 +1,5 @@
 name: Deploy-Staging-Production
+run-name: ${ github.event.inputs.environment }CICD to multi envrironments
 
 on:
   workflow_dispatch:
@@ -6,21 +7,21 @@ on:
       environment:
         type: environment
 
-env:
-  env_1: environment
-
 jobs:
   deploy_staging:
+    if: github.event.inputs.environment == 'staging'
     runs-on: ubuntu-latest
     environment:
       name: staging
       url: https://yahoo.co.jp
     steps:
-      - run: echo "ths is env=${{ env.env_1 }}"
+      - run: echo "this is ${{github.event.inputs.environment}}"
+      - run: echo "this is ${{github.event.inputs.environment}}"
       - run: echo deploy staging
       - run: echo secret ${{ secrets.SAMPLE_SECRET }}
   
   deploy_production:
+    if: github.event.inputs.environment == 'production'
     runs-on: ubuntu-latest
     environment:
       name: production

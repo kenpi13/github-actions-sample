@@ -1,4 +1,5 @@
 name: Deploy-Staging-Production
+run-name: Deploy ${ github.event.inputs.environment } 
 
 on:
   workflow_dispatch:

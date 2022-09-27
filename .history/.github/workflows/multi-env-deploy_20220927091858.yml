@@ -1,9 +1,10 @@
 name: CICD to multi environments
-
+run-name: ${ inputs.deploy_target }CICD to multi envrironments
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
 
 jobs:
   build_test:
