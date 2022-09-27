@@ -1,5 +1,5 @@
 name: echo branch name
-run-name: echo branch name $GITHUB_REF
+run-name: 
 on:
   push:
 
