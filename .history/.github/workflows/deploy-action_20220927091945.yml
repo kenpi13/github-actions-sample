@@ -1,5 +1,5 @@
 name: Deploy-Staging-Production
-run-name: Deploy ${ github.event.inputs.environment } 
+run-name: ${ github.event.inputs.environment }CICD to multi envrironments
 
 on:
   workflow_dispatch:
