@@ -1,5 +1,5 @@
 name: echo hello
-# run-name: echo by @${{ github.actor }}
+run-name: echo by @${{ github.actor }}
 
 on:
   push:
