@@ -1,0 +1,10 @@
+name: echo branch name
+on:
+  push:
+
+jobs:
+  echo-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo
