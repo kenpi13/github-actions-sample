@@ -1,0 +1,12 @@
+name: secret echo
+on:
+  push:
+
+jobs:
+  bash-example:
+    runs-on: ubuntu-latest
+    env:
+      MY_NAME: "Mona The Octocat"
+    steps:
+      - name: bash-version
+        run: echo "::add-mask::$MY_NAME"

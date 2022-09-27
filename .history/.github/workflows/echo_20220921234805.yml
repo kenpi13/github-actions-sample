@@ -1,0 +1,11 @@
+name: secret echo
+on:
+  push:
+
+jobs:
+  masking:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+      echo '::add-mask::test'
+      echo This is a test     

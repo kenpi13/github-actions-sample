@@ -1,5 +1,0 @@
-name: Deploy-Staging-Production
-
-on:
-  workflow_dispatch:
-

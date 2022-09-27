@@ -1,0 +1,16 @@
+name: Echo
+on:
+  push:
+
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Echo
+      run: |
+        echo name
+        DATE=date
+        echo "DATE=$(date)" >> $GITHUB_ENV
+        echo ${DATE}
