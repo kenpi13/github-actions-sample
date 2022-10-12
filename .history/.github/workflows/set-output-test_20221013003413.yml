@@ -1,0 +1,10 @@
+name: set-output-test
+
+on:
+  push:
+
+jobs:
+  echo-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello!
