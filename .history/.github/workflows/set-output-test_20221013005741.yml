@@ -1,0 +1,21 @@
+name: set-output-test
+
+on:
+  push:
+
+jobs:
+  echosetoutput:
+    runs-on: ubuntu-latest
+    steps:
+    - id: test_id
+      name: test_name
+      run: echo "::set-output name=test::hoge"
+    - run: echo "${{ steps.test_id.outputs.test }}"
+    steps:
+    - name: set env for prod
+      env:
+        AWS_ACCOUNT_ID: 123456789012
+        S3_BUCKET_NAME: deploy-prod
+      run: |
+        echo "::set-env name=AWS_ACCOUNT_ID::${AWS_ACCOUNT_ID}"
+        echo "::set-env name=S3_BUCKET_NAME::${S3_BUCKET_NAME}"
