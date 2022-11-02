@@ -1,0 +1,4 @@
+name: talk-script
+on:
+  push:
+

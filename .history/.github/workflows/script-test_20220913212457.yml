@@ -1,0 +1,8 @@
+name: talk-script
+on:
+  push:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+  

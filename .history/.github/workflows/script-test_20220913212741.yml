@@ -1,0 +1,13 @@
+name: talk-script
+on:
+  push:
+
+jobs:
+  talk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: execute script
+        run: sh talk.sh
+        working-directory: ./scripts
+   
